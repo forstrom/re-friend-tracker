@@ -105,7 +105,7 @@ export class GuiModel {
                     ]
                 },
                 {
-                    "id": "ActivityForm",
+                    "id": "AddActivityForm",
                     "title": "Activity",
                     "url": "/friend/:friendKey/activity",
                     "formFieldList": [
@@ -114,16 +114,6 @@ export class GuiModel {
                             "type": "autocomplete",
                             "name": "Activity",
                             "url": "/activity",
-                            "defaultKey": "activityKey",
-                            "readonly": true,
-                            "form": "ActivityForm",
-                            "width": 2
-                        },
-                        {
-                            "id":   "activity",
-                            "type": "autocomplete",
-                            "name": "Location",
-                            "url": "/location",
                             "defaultKey": "activityKey",
                             "readonly": true,
                             "form": "ActivityForm",
@@ -144,16 +134,12 @@ export class GuiModel {
                     ]
                 },
 		{
-		    "id": "GroupForm", 
-		    "title": "Group", 
-		    "url": "/group", 
-		    "formFieldList": [
+		    "id": "GroupForm", "title": "Group", "url": "/group", "formFieldList": [
 			{
 			    "id": "name",
 			    "type": "text",
 			    "name": "GroupName", "width": 2,
-			    "required": true
-			}, 
+			    "required": true			}, 
 			{
 			    "name": "Delete" 
 			},
@@ -193,13 +179,6 @@ export class GuiModel {
                             "color": "wisteria",
                             "page": "groupspage",
                         },
-                        {
-                            "type": "button",
-                            "name": "Activities",
-                            "icon": "fa-calendar-check",
-                            "color": "pumpkin",
-                            "page": "activitiespage",
-                        },
 
                     ]
                 },
@@ -213,9 +192,7 @@ export class GuiModel {
                             "type": "newButton",
                             "name": "NewFriend",
                             "icon": "fa-user",
-                            "color": "red",
-                            "width": 2,
-
+                            "color": "green",
                             "form": {
                                 "form": "FriendForm"
                             }
@@ -242,7 +219,7 @@ export class GuiModel {
                             "type": "newButton",
                             "name": "NewLocation",
                             "icon": "fa-home",
-                            "color": "red",
+                            "color": "green",
                             "width": 2,
                             "form": {
                                 "form": "LocationForm"
@@ -251,7 +228,7 @@ export class GuiModel {
                         {
                             "type": "list",
                             "icon": "fa-home",
-                            "color": "yellow",
+                            "color": "blue",
                             "search": true,
                             "url": "/location",
                             "form": {
@@ -270,8 +247,7 @@ export class GuiModel {
                             "type": "newButton",
                             "name": "NewGroup",
                             "icon": "fa-weixin",
-                            "color": "red",
-                            "width": 2,
+                            "color": "green",
                             "form": {
                                 "form": "GroupForm"
                             }
@@ -284,34 +260,6 @@ export class GuiModel {
 			    "url": "/group",
 			    "form": {
 				"form": "GroupForm"
-			    }
-			},
-                    ]
-                },
-                {
-                    "id": "activitiespage",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "newButton",
-                            "name": "NewActivity",
-                            "icon": "fa-calendar-check",
-                            "color": "red",
-                            "width": 2,
-                            "form": {
-                                "form": "ActivityForm"
-                            }
-                        },
-			{
-			    "type": "list",
-			    "icon": "fa-weixin",
-			    "color": "pumpkin",
-			    "search": true,
-			    "url": "/activity",
-			    "form": {
-				"form": "ActivityForm"
 			    }
 			},
                     ]
